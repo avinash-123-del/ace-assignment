@@ -7,8 +7,8 @@ export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [currentUser, setCurrentUser] = useState(null); // Stores logged-in user info
-  const [userSelections, setUserSelections] = useState({}); // Stores user's dish selections
+  const [currentUser, setCurrentUser] = useState(null);
+  const [userSelections, setUserSelections] = useState({}); 
 
   useEffect(() => {
     const storedUsers = JSON.parse(localStorage.getItem('users'));

@@ -16,7 +16,6 @@ const AdminPanel = () => {
     setUsers(updatedUsers);
     localStorage.setItem('users', JSON.stringify(updatedUsers));
 
-    // Remove user selections
     const updatedSelections = { ...userSelections };
     delete updatedSelections[username];
     setUserSelections(updatedSelections);

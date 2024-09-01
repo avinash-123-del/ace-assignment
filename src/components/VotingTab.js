@@ -11,7 +11,7 @@ const VotingTab = () => {
   const { userSelections, setUserSelections } = useAuth();
   const [loader, setLoader] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [dishesPerPage] = useState(6); // Adjust the number of dishes per page as needed
+  const [dishesPerPage] = useState(6); 
 
   useEffect(() => {
     const fetchDishes = async () => {
@@ -81,7 +81,6 @@ const VotingTab = () => {
     }
   };
 
-  // Get current dishes
   const indexOfLastDish = currentPage * dishesPerPage;
   const indexOfFirstDish = indexOfLastDish - dishesPerPage;
   const currentDishes = dishes.slice(indexOfFirstDish, indexOfLastDish);
