@@ -334,6 +334,11 @@ header{
   background-color: #d95b5b !important;
 }
 
+.css-mpst19.Mui-selected{
+  background-color: #d95b5b !important;
+
+}
+
 .card-title{
   color: #d95b5b !important;
 }
