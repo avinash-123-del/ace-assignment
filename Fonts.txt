@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Montserrat
+Author: Julieta Ulanovsky,Sol Matas,Juan Pablo del Peral,Jacques Le Bailly
+Url: https://fonts.google.com/specimen/Montserrat
+
+Font: Pacifico
+Author: Vernon Adams,Jacques Le Bailly,Botjo Nikoltchev,Ani Petrova
+Url: https://fonts.google.com/specimen/Pacifico

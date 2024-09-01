@@ -1,0 +1,348 @@
+.scrollbar-hidden::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+}
+
+
+
+.toggle-menu-style{
+  opacity: 1;
+  visibility: inherit;
+}
+
+.toggle-menu-after::after{
+  position: absolute;
+  top: auto;
+  bottom: -4px;
+  width: 18px;
+  display: block;
+  content: '';
+  height: 2px;
+  width: 24px;
+  background-color: #FFF;
+  transition: all 0.3s ease-in-out;
+}
+
+.slide-in-top {
+	-webkit-animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.css-19wsa2m-MuiButtonBase-root-MuiTab-root.Mui-selected{
+  color: #d95b5b !important;
+  font-weight: 600;
+  border-bottom: 2px solid #d95b5b !important;
+}
+
+ @-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-out-top {
+	-webkit-animation: slide-out-top 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: slide-out-top 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+ @-webkit-keyframes slide-out-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+}
+@keyframes slide-out-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+    opacity: 0;
+  }
+}
+
+
+body{
+  height: 90vh;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif !important;
+ }
+
+ body::-webkit-scrollbar{
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: #d95b5b;
+  border-radius: 30px;
+ }
+
+ .css-binzgt{
+  margin-top: 0px !important;
+}
+
+/* Login.css */
+
+
+.login-background {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/public/assets/login-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+
+.shadow-login{
+  position: relative;
+  z-index: 2;
+  box-shadow: rgba(231, 47, 47, 0.35) 0px -50px 36px -28px inset !important;
+}
+
+.login-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Adjust the brightness here */
+  z-index: 1;
+}
+
+
+.login-content {
+  position: relative;
+  z-index: 2;
+  background-image: linear-gradient(to top ,  #dbe6f6,  #c5796d) !important;
+}
+.slider-container {
+  width: 100%;
+  height: 80vh;
+  /* position: relative; Makes it possible to layer content on top if needed */
+  overflow: hidden;
+}
+
+ .css-1d3z3hw-MuiOutlinedInput-notchedOutline{
+  border: 2px solid rgb(235, 74, 74) !important;
+}
+ .css-1pbc52w span{
+  color: red !important;
+}
+
+/* Styles the images to cover the container fully */
+.slick-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  object-position: 0% -30%; /* Adjusts the position of the image */
+}
+.card-img, .card-img-bottom, .card-img-top{
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+.card-img-top:hover{
+  transform: scale(1.05);
+  transition: linear 0.4s;
+}
+
+.slider-container{
+  height: 40vh !important;
+  width: 100% !important;
+}
+
+.login_btn{
+  background-color: rgb(248, 70, 70) !important;
+}
+
+.fs-12{
+  font-size: 12px;
+}
+
+.card{
+height: 350px !important;
+  overflow: hidden;
+}
+
+.wobble-hor-bottom {
+	-webkit-animation: wobble-hor-bottom 0.8s both;
+	        animation: wobble-hor-bottom 3s both infinite;
+}
+
+/* .home_bg{
+  height: 90vh;
+  width: 400vw;
+  overflow: scroll;
+  background-size: cover;
+  background-image: #c97777;
+}
+
+.home_bg::before{
+  height: 100vh;
+  width: 100vw;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.9) !important; 
+} */
+
+.voting_tab{
+  height: 68vh;
+  width: 100vw;
+  margin: auto;
+  overflow: scroll;
+}
+
+.voting_tab::-webkit-scrollbar{
+  display: none;
+}
+
+.t-color{
+  color: #d95b5b;
+}
+
+.cp{
+  cursor: pointer;
+}
+
+.w-3{
+  width: 300px;
+}
+
+
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+            transform: translateX(-30px) rotate(-6deg);
+  }
+  30% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+            transform: translateX(15px) rotate(6deg);
+  }
+  45% {
+    -webkit-transform: translateX(-15px) rotate(-3.6deg);
+            transform: translateX(-15px) rotate(-3.6deg);
+  }
+  60% {
+    -webkit-transform: translateX(9px) rotate(2.4deg);
+            transform: translateX(9px) rotate(2.4deg);
+  }
+  75% {
+    -webkit-transform: translateX(-6px) rotate(-1.2deg);
+            transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+
+header{
+  background: #d95b5b !important;
+}
+
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-color: #ccc #0000;
+  animation: l16 1s infinite linear;
+}
+.loader::before,
+.loader::after {    
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+}
+.loader::before {
+  border-color: #f03355 #0000;
+  animation: inherit; 
+  animation-duration: .5s;
+  animation-direction: reverse;
+}
+.loader::after {
+  margin: 8px;
+}
+
+.css-1i12n2a-MuiPaper-root{
+  padding: 10px !important;
+}
+
+.list-group-item{
+  display: flex !important;
+  background-color: red;
+  justify-content: space-between;
+}
+@keyframes l16 { 
+  100%{transform: rotate(1turn)}
+}
+
+.admin-del{ 
+  font-size: 12px;
+  border: none;
+  background-color: #d95b5b;
+  color: white;
+  border-radius: 15px;
+  padding: 5px 15px ;
+}
+
+.css-1gaup4j-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected{
+  background-color: #d95b5b !important;
+}
+
+.card-title{
+  color: #d95b5b !important;
+}
+
+.home-bg{
+  position: absolute;
+  height:95vh;
+  width: 100%;
+  left: 0px;
+  z-index: -2;
+  top: -80px;
+}

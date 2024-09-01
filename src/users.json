@@ -1,0 +1,7 @@
+ [
+    { "username": "admin", "password": "admin123", "isAdmin": true },
+    { "username": "user1", "password": "password1", "isAdmin": false },
+    { "username": "user2", "password": "password2", "isAdmin": false },
+    { "username": "u", "password": "p", "isAdmin": true }
+  ]
+  
