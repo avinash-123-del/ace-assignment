@@ -29,9 +29,9 @@
 }
 
 .css-19wsa2m-MuiButtonBase-root-MuiTab-root.Mui-selected{
-  color: #d95b5b !important;
+  color: #d53131 !important;
   font-weight: 600;
-  border-bottom: 2px solid #d95b5b !important;
+  border-bottom: 2px solid #d53131 !important;
 }
 
  @-webkit-keyframes slide-in-top {
@@ -104,7 +104,7 @@ body{
 }
 
 body::-webkit-scrollbar-thumb{
-  background-color: #d95b5b;
+  background-color: #d53131;
   border-radius: 30px;
  }
 
@@ -151,6 +151,11 @@ body::-webkit-scrollbar-thumb{
   z-index: 2;
   background-image: linear-gradient(to top ,  #dbe6f6,  #c5796d) !important;
 }
+
+.card{
+  background-image: linear-gradient(to top ,  #dbe6f6,  #c5796d) !important;
+
+}
 .slider-container {
   width: 100%;
   height: 80vh;
@@ -172,6 +177,7 @@ body::-webkit-scrollbar-thumb{
   object-fit: cover; /* Ensures the image covers the container */
   object-position: 0% -30%; /* Adjusts the position of the image */
 }
+
 .card-img, .card-img-bottom, .card-img-top{
   object-fit: cover;
   width: 100%;
@@ -233,7 +239,7 @@ height: 350px !important;
 }
 
 .t-color{
-  color: #d95b5b;
+  color: #d53131;
 }
 
 .cp{
@@ -277,7 +283,7 @@ height: 350px !important;
 
 
 header{
-  background: #d95b5b !important;
+  background: #d53131 !important;
 }
 
 
@@ -324,23 +330,23 @@ header{
 .admin-del{ 
   font-size: 12px;
   border: none;
-  background-color: #d95b5b;
+  background-color: #d53131;
   color: white;
   border-radius: 15px;
   padding: 5px 15px ;
 }
 
 .css-1gaup4j-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected{
-  background-color: #d95b5b !important;
+  background-color: #d53131 !important;
 }
 
 .css-mpst19.Mui-selected{
-  background-color: #d95b5b !important;
+  background-color: #d53131 !important;
 
 }
 
 .card-title{
-  color: #d95b5b !important;
+  color: #d53131 !important;
 }
 
 .home-bg{
@@ -350,4 +356,10 @@ header{
   left: 0px;
   z-index: -2;
   top: -80px;
+  filter: brightness(0.8);
+}
+
+.css-19wsa2m-MuiButtonBase-root-MuiTab-root{
+  color: rgb(49, 48, 48) !important;
+  font-weight: bold !important;
 }

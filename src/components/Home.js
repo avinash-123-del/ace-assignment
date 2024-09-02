@@ -51,7 +51,7 @@ const HomePage = () => {
           </Typography>
           <Tooltip title="Open settings">
             <IconButton sx={{ p: 0, margin:1 }}>
-              <Avatar alt="User Avatar" src="/assets/avatar.jpg" />
+              <Avatar alt="User Avatar" src="/assets/avtar.png" />
             </IconButton>
           </Tooltip>
           <Typography variant="subtitle1" className='d-none d-md-block' sx={{ marginRight: 2 }}>
@@ -78,7 +78,7 @@ const HomePage = () => {
       <Box sx={{ width: '100%', mt: 2 }} className='home_bg' >
         <Tabs
           value={activeTab}
-          onChange={handleChangeTab}
+          onChange={handleChangeTab}  
           centered
           indicatorColor="primary"
           textColor="primary"

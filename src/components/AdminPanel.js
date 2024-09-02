@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../context/AuthContext';
 import ReactStars from 'react-rating-stars-component';
+import { Button, Typography } from '@mui/material';
 
 const AdminPanel = () => {
   const { userSelections, setUserSelections } = useAuth();
@@ -17,7 +18,11 @@ const AdminPanel = () => {
     localStorage.setItem('users', JSON.stringify(updatedUsers));
 
     const updatedSelections = { ...userSelections };
-    delete updatedSelections[username];
+    Object.keys(updatedSelections).forEach(dishId => {
+      if (updatedSelections[dishId] && updatedSelections[dishId][username]) {
+        delete updatedSelections[dishId][username];
+      }
+    });
     setUserSelections(updatedSelections);
   };
 
@@ -32,17 +37,30 @@ const AdminPanel = () => {
     });
   };
 
+  const calculatePoints = (rank) => {
+    switch(rank) {
+      case 1: return 30;
+      case 2: return 20;
+      case 3: return 10;
+      default: return 0;
+    }
+  };
+
   return (
-    <div className='container' style={{"height":"80vh"}}>
-      <h3  className='concert-one-regular fw-bold t-color text-center '>Admin Panel</h3>
+    <div className='container' style={{ height: "80vh" }}>
+      <Typography variant="h4" className='concert-one-regular fw-bold t-color text-center'>Admin Panel</Typography>
       <div className="list-group">
         {users.map((user, index) => (
-          <div key={index} className="list-group-item" >
-            <h5 className='t-color'>{user.username}</h5>
+          <div key={index} className="list-group-item">
+            <Typography variant="h5" className='t-color'>
+              {user.username} {user.isAdmin && "(Admin)"}
+            </Typography>
             <ul>
               {Object.entries(userSelections[user.username] || {}).map(([dishId, rank]) => (
-                <li key={dishId} >
-                  Dish ID: {dishId}, Rank: {rank}, Points: {rank === 1 ? 30 : rank === 2 ? 20 : rank === 3 ? 10 : 0}
+                <li key={dishId}>
+                  <Typography>
+                    Dish ID: {dishId}, Rank: {rank}, Points: {calculatePoints(rank)}
+                  </Typography>
                   <ReactStars
                     count={3}
                     value={rank}
@@ -57,7 +75,9 @@ const AdminPanel = () => {
                 </li>
               ))}
             </ul>
-            <button className='admin-del ' onClick={() => handleDeleteUser(user.username)}>Delete User</button>
+            {!user.isAdmin && (
+              <Button variant="contained" color="secondary" onClick={() => handleDeleteUser(user.username)}>Delete User</Button>
+            )}
           </div>
         ))}
       </div>

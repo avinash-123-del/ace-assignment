@@ -73,7 +73,7 @@ const ResultsTab = ({setActiveTab}) => {
 
           <p className='text-center'>No Dish ranked yet</p>
 
-          <div onClick={() => setActiveTab(0)} className='h-50 p-3 w-3 shadow bg-danger text-center text-white cp concert-one-regular rounded-3'>
+          <div onClick={() => setActiveTab(0)} className=   'h-50 p-3 w-3 shadow bg-danger text-center text-white cp concert-one-regular rounded-3'>
             Start Ranking Your dish
           </div>
         </div>
